@@ -36,5 +36,4 @@ def convert_gray_to_bin(n):
 if __name__=="__main__":
     gray_code = generate_gray(2)
     print(gray_code)
-    print('hello')
 
