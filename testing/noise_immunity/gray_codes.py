@@ -20,9 +20,12 @@ def generate_gray(n):
     return main_ans
 
 def convert_bin_to_gray(n):
+    pad = len(n)
     n = int(str(n), 2)
     n ^= (n >> 1)
-    return bin(n)[2:]
+
+    
+    return format(n, "0{0}b".format(pad))
   
 def convert_gray_to_bin(n):
     n = int(str(n),2)
@@ -36,4 +39,4 @@ def convert_gray_to_bin(n):
 if __name__=="__main__":
     gray_code = generate_gray(2)
     print(gray_code)
-
+    print(convert_bin_to_gray('010'))
